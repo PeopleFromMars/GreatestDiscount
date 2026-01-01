@@ -1,0 +1,38 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": false,
+  "pedestalItems": [
+    {
+      "tag": "c:ingots/netherite"
+    },
+    {
+      "tag": "c:ingots/netherite"
+    },
+    {
+      "tag": "c:ingots/netherite"
+    },
+    {
+      "tag": "c:ingots/netherite"
+    },
+    {
+      "tag": "c:nether_stars"
+    },
+    {
+      "tag": "c:nether_stars"
+    },
+    {
+      "tag": "c:gems/source"
+    },
+    {
+      "tag": "c:gems/source"
+    }
+  ],
+  "reagent": {
+    "item": "ars_nouveau:ring_of_greater_discount"
+  },
+  "result": {
+    "count": 1,
+    "id": "greatest_discount:ring_of_greatest_discount"
+  },
+  "sourceCost": 0
+}
