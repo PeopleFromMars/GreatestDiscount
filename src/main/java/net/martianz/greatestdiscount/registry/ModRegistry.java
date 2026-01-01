@@ -14,7 +14,7 @@ public class ModRegistry {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.createItems(GreatestDiscount.MODID);
 
-    public static final ItemRegistryWrapper<DiscountRing> RING_OF_GREATER_DISCOUNT = register("ring_of_greatest_discount", () -> new DiscountRing() {
+    public static final ItemRegistryWrapper<DiscountRing> RING_OF_GREATEST_DISCOUNT = register("ring_of_greatest_discount", () -> new DiscountRing() {
         @Override
         public int getManaDiscount() {
             return Config.GREATEST_DISCOUNT_VALUE.getAsInt();

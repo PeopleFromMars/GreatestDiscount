@@ -55,9 +55,9 @@ public class GreatestDiscount {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        //if (event.getTabKey() == CreativeTabRegistry.TABS.getRegistryKey()) {
-            //event.accept();
-        //}
+        if (event.getTabKey() == CreativeTabRegistry.BLOCKS.getKey()) {
+            event.accept(ModRegistry.RING_OF_GREATEST_DISCOUNT.get());
+        }
     }
 
     @SubscribeEvent
