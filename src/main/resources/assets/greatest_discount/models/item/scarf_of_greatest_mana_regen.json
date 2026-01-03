@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "greatest_discount:item/scarf_of_greatest_mana_regen"
+  }
+}

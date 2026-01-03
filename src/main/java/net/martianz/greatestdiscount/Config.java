@@ -19,6 +19,14 @@ public class Config {
             .comment("Amount of reduction given by the Greatest Discount Ring")
             .defineInRange("greatestDiscount", 40, 20, Integer.MAX_VALUE);
 
+    public static final ModConfigSpec.IntValue GREATER_REGEN_VALUE = BUILDER
+            .comment("Amount of mana regeneration given by the Greater Regen Amulet")
+            .defineInRange("greaterRegen", 6, 3, Integer.MAX_VALUE);
+
+    public static final ModConfigSpec.IntValue GREATEST_REGEN_VALUE = BUILDER
+            .comment("Amount of mana regeneration given by the Greatest Regen Scarf")
+            .defineInRange("greatestRegen", 12, 3, Integer.MAX_VALUE);
+
 
     static final ModConfigSpec SPEC = BUILDER.build();
 }

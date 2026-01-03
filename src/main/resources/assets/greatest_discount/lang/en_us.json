@@ -1,5 +1,9 @@
 {
   "item.greatest_discount.ring_of_greatest_discount": "Ring of Greatest Discount",
+  "item.greatest_discount.amulet_of_greater_mana_regen": "Amulet of Greater Mana Regen",
+  "item.greatest_discount.scarf_of_greatest_mana_regen": "Scarf of Greatest Mana Regen",
 
-  "greatest_discount.configuration.greatestDiscount": "Greatest Discount Given"
+  "greatest_discount.configuration.greatestDiscount": "Greatest Ring Discount",
+  "greatest_discount.configuration.greaterRegen": "Greater Amulet Regen",
+  "greatest_discount.configuration.greatestRegen": "Greatest Scarf Regen"
 }

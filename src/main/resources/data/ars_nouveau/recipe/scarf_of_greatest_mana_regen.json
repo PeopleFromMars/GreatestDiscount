@@ -1,0 +1,38 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": false,
+  "pedestalItems": [
+    {
+      "tag": "c:nether_stars"
+    },
+    {
+      "tag": "c:nether_stars"
+    },
+    {
+      "tag": "c:ingots/netherite"
+    },
+    {
+      "tag": "c:ingots/netherite"
+    },
+    {
+      "item": "minecraft:dragon_breath"
+    },
+    {
+      "item": "minecraft:dragon_breath"
+    },
+    {
+      "item": "ars_nouveau:blank_thread"
+    },
+    {
+      "item": "ars_nouveau:blank_thread"
+    }
+  ],
+  "reagent": {
+    "item": "greatest_discount:amulet_of_greater_mana_regen"
+  },
+  "result": {
+    "count": 1,
+    "id": "greatest_discount:scarf_of_greatest_mana_regen"
+  },
+  "sourceCost": 0
+}

@@ -10,9 +10,10 @@ credits="MartianZ Modding"
 logoFile="greatest_discount_logo.png" #optional
 
 description='''
-A simple addon to give the players the greatest discount.
+A simple addon to give the players various items that grant larger buffs.
 The mod version refers to whatever version of ars nouveau we used during development.
-The discount value is configurable, default is 40 (to be in line with the lesser (10) and greater (20) discount rings.)
+The values can be modified via the config file (minimum values are set to whatever ars offers).
+It may be that you have to restart the game for the config changes to actually take effect not just visually.
 '''
 
 [[dependencies.${mod_id}]] #optional
@@ -32,5 +33,11 @@ The discount value is configurable, default is 40 (to be in line with the lesser
 [[dependencies.${mod_id}]]
 modId = "ars_nouveau"
 versionRange = "[1.21.1-5.4,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "curios"
+versionRange = "[9.0.14+1.21.1,)"
 ordering = "AFTER"
 side = "BOTH"

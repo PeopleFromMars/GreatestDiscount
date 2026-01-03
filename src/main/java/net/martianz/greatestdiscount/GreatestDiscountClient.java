@@ -1,12 +1,15 @@
 package net.martianz.greatestdiscount;
 
-import net.minecraft.client.Minecraft;
+import net.martianz.greatestdiscount.client.CurioClientSetup;
+import net.martianz.greatestdiscount.registry.CurioLayerRegistry;
+import net.martianz.greatestdiscount.registry.ModRendererRegistry;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
@@ -15,14 +18,17 @@ import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 public class GreatestDiscountClient {
 
     public GreatestDiscountClient(ModContainer container) {
-        // Allows NeoForge to create a config screen for this mod's configs.
-        // The config screen is accessed by going to the Mods screen > clicking on your mod > clicking on config.
-        // Do not forget to add translations for your config options to the en_us.json file.
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+        CurioClientSetup.setup(container.getEventBus());
     }
 
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
+        event.enqueueWork(() -> {ModRendererRegistry.register();});
+    }
 
+    @SubscribeEvent
+    public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        CurioLayerRegistry.register(event::registerLayerDefinition);
     }
 }

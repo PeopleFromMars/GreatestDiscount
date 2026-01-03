@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "greatest_discount:item/amulet_of_greater_mana_regen"
+  }
+}
