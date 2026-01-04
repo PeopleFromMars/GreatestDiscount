@@ -30,8 +30,8 @@ public class CuriosRenderingHandler implements EquipmentRenderingHandler {
     @Override
     public @Nullable net.martianz.greatestdiscount.client.renderer.CurioRenderer getCurioRenderer(Item item) {
         Optional<ICurioRenderer> renderer = CuriosRendererRegistry.getRenderer(item);
-        if (renderer.isPresent() && renderer.get() instanceof CurioRenderer artifactTrinketRenderer) {
-            return artifactTrinketRenderer.renderer();
+        if (renderer.isPresent() && renderer.get() instanceof CurioRenderer curioRenderer) {
+            return curioRenderer.renderer();
         }
         return null;
     }

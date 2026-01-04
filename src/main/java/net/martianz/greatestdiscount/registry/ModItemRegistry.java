@@ -1,11 +1,11 @@
 package net.martianz.greatestdiscount.registry;
 
-import com.hollingsworth.arsnouveau.common.items.curios.AbstractManaCurio;
-import com.hollingsworth.arsnouveau.common.items.curios.DiscountRing;
 import com.hollingsworth.arsnouveau.setup.registry.CreativeTabRegistry;
 import com.hollingsworth.arsnouveau.setup.registry.ItemRegistryWrapper;
 import net.martianz.greatestdiscount.Config;
 import net.martianz.greatestdiscount.GreatestDiscount;
+import net.martianz.greatestdiscount.item.GreatestAbstractManaCurio;
+import net.martianz.greatestdiscount.item.GreatestDiscountRing;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
@@ -18,21 +18,21 @@ public class ModItemRegistry {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.createItems(GreatestDiscount.MODID);
 
-    public static final ItemRegistryWrapper<DiscountRing> RING_OF_GREATEST_DISCOUNT = register("ring_of_greatest_discount", () -> new DiscountRing() {
+    public static final ItemRegistryWrapper<GreatestDiscountRing> RING_OF_GREATEST_DISCOUNT = register("ring_of_greatest_discount", () -> new GreatestDiscountRing(new Item.Properties().stacksTo(1).fireResistant()) {
         @Override
         public int getManaDiscount() {
             return Config.GREATEST_DISCOUNT_VALUE.getAsInt();
         }
     });
 
-    public static final ItemRegistryWrapper<AbstractManaCurio> AMULET_OF_GREATER_MANA_REGEN = register("amulet_of_greater_mana_regen", () -> new AbstractManaCurio() {
+    public static final ItemRegistryWrapper<GreatestAbstractManaCurio> AMULET_OF_GREATER_MANA_REGEN = register("amulet_of_greater_mana_regen", () -> new GreatestAbstractManaCurio(new Item.Properties().stacksTo(1)) {
         @Override
         public int getManaRegenBonus(ItemStack i) {
             return Config.GREATER_REGEN_VALUE.getAsInt();
         }
     });
 
-    public static final ItemRegistryWrapper<AbstractManaCurio> SCARF_OF_GREATEST_MANA_REGEN = register("scarf_of_greatest_mana_regen", () -> new AbstractManaCurio() {
+    public static final ItemRegistryWrapper<GreatestAbstractManaCurio> SCARF_OF_GREATEST_MANA_REGEN = register("scarf_of_greatest_mana_regen", () -> new GreatestAbstractManaCurio(new Item.Properties().stacksTo(1).fireResistant()) {
         @Override
         public int getManaRegenBonus(ItemStack i) {
             return Config.GREATEST_REGEN_VALUE.getAsInt();
